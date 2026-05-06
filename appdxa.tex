@@ -1,0 +1,161 @@
+\chapter{Program Examples \& Sample Sheet}
+\label{appdx-a} 
+
+\section{Sample Programs: Preparing a Program using Tables }
+\newtcolorbox[auto counter,number within=section]{table2}[2][]{%
+colback=red!5!white,colframe=gray!75!black,fonttitle=\bfseries,
+title=Table~\thetcbcounter: #2} %#2, #1
+
+Sometimes, it is helpful to construct a table to outlines the steps of the program. The following table illustrates an example how to prepare the steps before entering them into the GL controller program editor (see Section 5.3). This program conducts \emph{test} on temperature fluctuation.
+
+\begin{table2}[label={mynamelabel},nameref={Title}]{Temperature Fluctuation Program} {\label{tab:sample-prog-00}}
+{%
+\begin{tabular}{l | r| r| r| r| r| r| r| r| r | r}
+\hline %\hline
+\multicolumn{1}{l}{} &  \multicolumn{10}{c}{\bf{Tabular Sheet for preparing programming steps}}          \\
+\hline \hline
+\multicolumn{1}{l|}{Step} &  \multicolumn{2}{c|}{Temp (${}^{\circ}$C)} &  \multicolumn{2}{c|}{Humi (\%rh)} &  \multicolumn{2}{c|}{Parameters}  &   \multicolumn{2}{c|}{Time Signals}   &   \multicolumn{2}{c}{Counter}    \\
+No. & Mode    & SP   & Mode   & SP & Duration & Refrig & TS 1 & TS 2 & Step & Count \\
+%No.  &  (${}^{\circ}$C) & (\%rh) & (h:m) & Time  &          & 1   & 2   &      &  \\
+\hline 
+1& Soak Ctrl & -30 & Off & 5 & 1:00:00&  Auto & & & & 0\\
+2& Soak Ctrl &  20 & Off & 5 & 1:00:00&  Auto & & & & 0\\
+3& Soak Ctrl &  55 & Off & 5 & 1:00:00&  Auto & & & & 0\\
+4& Soak Ctrl &  65 & Off & 5 & 1:00:00&  Auto & & & & 0\\
+5& Soak Ctrl & 180 & Off & 5 & 1:00:00&  Auto & & & & 0\\
+6& Soak Ctrl &  23 & Off & 5  &1:00:00&  Auto & & & & 0\\
+\hline 
+\multicolumn{1}{l}{} &     \multicolumn{10}{c}{Programing Steps} \\
+\hline 
+\end{tabular} 
+}
+\end{table2}
+
+Here is another program that performs Low Humidity test. This program requires a chamber with humidity option. As illustrated in the following Table, deviation soak between plus and minus 10 have been utilized. Both temperature and humidity have been controlled via {\sl{soak}}. Time signal TS 9 and TS 10 have been utilized. {\bf{Note:}} TS 1 and 2 are generally the default time signals.
+
+\begin{table2}[label={mynamelabel},nameref={Title}]{Low Humidity Test} {\label{tab:sample-prog-01}}
+{%
+\begin{tabular}{l | r| r| r| r| r| r| r| r| r | r | r |r }
+\hline %\hline
+\multicolumn{1}{l}{} &  \multicolumn{12}{c}{\bf{Tabular Sheet for preparing programming steps}}          \\
+\hline \hline
+\multicolumn{1}{l|}{Step} &  \multicolumn{2}{c|}{Temp (${}^{\circ}$C)} & \multicolumn{2}{c|}{Dev} &  \multicolumn{2}{c|}{Humi (\%rh)} &  \multicolumn{2}{c|}{}  &   \multicolumn{2}{c|}{Time Signals}   &   \multicolumn{2}{c}{Counter}    \\
+No. & Mode    & SP  & + & -  & Mode   & SP & Time & Refrig & TS9 & TS10 & Step & Count \\
+%No.  &  (${}^{\circ}$C) & (\%rh) & (h:m) & Time  &          & 1   & 2   &      &  \\
+\hline 
+1& Soak & 60 & 10 & -10 & Soak & 10  & 2:00&  Auto & On& On & & \\
+2& Soak & 40& 10 & -10 & Soak & 15 &  2:00&  Auto & On& On & & \\
+3& Soak & 20&  10 & -10 & Soak & 15 &  2:00&  Auto & On& On & & \\
+4& Soak & 10& 10 & -10 & Soak & 15 &  2:00&  Auto & On& On & & \\
+5& Soak & 40& 10 & -10 & Soak & 20 &   2:00&  Auto & On & On & & \\
+6& Soak & 20& 10 & -10 & Soak & 30 &   2:00&  Auto & On& On & & \\
+7& Soak & 40& 10 & -10 &  Soak & 40 &   2:00&  Auto & On& On & & \\
+8& Soak & 10&  10 & -10 & Soak & 20 &  2:00&  Auto & On&  & & \\
+9& Soak & 20&  10 & -10 & Soak & 30 & 2:00&  Auto & On&  & & \\
+10& Soak & 10& 10 & -10 & Soak & 40 &   2:00&  Auto & On& & & \\
+11& Soak & 40&  10 & -10 & Soak & 20 &  2:00&  Auto & On&  & & \\
+12& Soak & 20& 10 & -10 & Soak & 45 &   2:00&  Auto & On&  & & \\
+13& Soak & 10&10 & -10 &  Soak & 80 &  2:00&  Auto & On&  & & \\
+\hline 
+\multicolumn{1}{l}{} &     \multicolumn{12}{c}{Programing Steps} \\
+\hline 
+\end{tabular} 
+}
+\end{table2}
+
+\clearpage 
+\section{Program Creation Sheet}
+
+Copy and use the following programming table to prepare a program. 
+
+\begin{table2}[label={mynamelabel},nameref={Title}]{Sample Program Creation Sheet} {\label{tab:sample-prog-04}}
+{%
+\begin{tabular}{l | r| r| r| r| r| r| r| r| r| r|r| r| r| r| r| r| r}
+\hline %\hline
+\multicolumn{1}{l|}{} &  \multicolumn{17}{c}{\bf{Tabular Sheet for preparing programming steps}}          \\
+\hline \hline
+\multicolumn{1}{l|}{} &  \multicolumn{5}{c|}{Parameters} &   \multicolumn{12}{c}{Time Signals (TS)}       \\
+Step & Temp             & Humi   & Time & Soak & Re-  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\
+No.  & ${}^{\circ}$C & \%rh & h:m:s & Time &  frig       &  &  &  &  &  &  &  &  &  &  &  & \\
+\hline 
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+ &   &  &   &  &  &  &  &  &  &  &  &  &  &  &  &  & \\
+%\hline 
+%\multicolumn{1}{|l|}{} &     \multicolumn{17}{c|}{Programing Steps} \\
+%\hline 
+\end{tabular} 
+}
+\end{table2}
+
+Programming operational features. 
+
+\begin{table2}[label={mynamelabel},nameref={Title}]{Programming Optional Features} {\label{tab:sample-prog-05}}
+   {%
+     \begin{tabular}{r | l }
+       \hline
+       {\bf{Processing at}} & $\square$ Stop $\qquad$ $\square$ Power OFF  $\qquad \square$ Hold Last Step\\ 
+       {\bf{end of}}   & $\square$ Constant Operation (No. 1)(No. 2) (No. 3) \\ 
+       {\bf{Operation}} &  $\square$ Operate Next Program No. ( $\quad$ ), Step  ( $\quad$ ) \\ \hline 
+       {\bf{Counter A}} & Repeat cycle (): \\
+                        & Repeating Start Step ( $\quad$ ) Step $\longleftarrow$ Repeating End Step ( $\quad$ ) Step \\ \hline 
+       {\bf{Counter B}} & Repeat cycle (): \\ 
+                     & Repeating Start Step ( $\quad$ ) Step $\longleftarrow$ Repeating End Step ( $\quad$ ) Step \\ \hline 
+      {\bf{Start Setting}}  & 1st Step $\qquad$ Start Setting in Ramp Operation \\
+      {\bf{(Ramp}}  & $\square$ Process Value  \\  
+      {\bf{Operation)}} & $\square$ Set Point ( $\quad {}^{\circ}$C)( $\quad$ \%RH) \\  
+       \hline 
+       \end{tabular}
+   }
+   \end{table2}
+
+   {\bf{Note:}} GL controller supports multiple counters which therefore will not be limited to just Counter A and Counter B. Each counter and its loop can be envoked by entering the loop number under the {\bf{Counter}} column (refer to Tables in Section~\ref{appdx-a}) and then set the start step. Multiple counters can be created by manipulating the start/stop step. The following table illustrates how counters are manipulated in a program.   
+
+\begin{table2}[label={mynamelabel},nameref={Title}]{Temperature Fluctuation Program with Counters} {\label{tab:sample-prog-00}}
+{%
+\begin{tabular}{l | r| r| r| r| r| r| r| r| r | r}
+\hline %\hline
+\multicolumn{1}{l}{} &  \multicolumn{10}{c}{\bf{Tabular Sheet for preparing programming steps}}          \\
+\hline \hline
+\multicolumn{1}{l|}{Step} &  \multicolumn{2}{c|}{Temp (${}^{\circ}$C)} &  \multicolumn{2}{c|}{Humi (\%rh)} &  \multicolumn{2}{c|}{Parameters}  &   \multicolumn{2}{c|}{Time Signals}   &   \multicolumn{2}{c}{Counter}    \\
+No. & Mode    & SP   & Mode   & SP & Duration & Refrig & TS 1 & TS 2 & Step & Count \\
+%No.  &  (${}^{\circ}$C) & (\%rh) & (h:m) & Time  &          & 1   & 2   &      &  \\
+\hline 
+1& Soak Ctrl & -30 & Off & 5 & 1:00:00&  Auto & & &1 & 0\\
+2& Soak Ctrl &  20 & Off & 5 & 1:00:00&  Auto & & &1 & 0\\
+3& Soak Ctrl &  55 & Off & 5 & 1:00:00&  Auto & & &2 & 3\\
+4& Soak Ctrl &  65 & Off & 5 & 1:00:00&  Auto & & &3 & 2\\
+5& Soak Ctrl & 180 & Off & 5 & 1:00:00&  Auto & & &1 & 4\\
+6& Soak Ctrl &  23 & Off & 5  &1:00:00&  Auto & & &4 & 4\\
+\hline 
+%\multicolumn{1}{l}{} &     \multicolumn{10}{c}{Programing Steps} \\
+%\hline 
+\end{tabular} 
+}
+\end{table2}
+
+The following figure depicts the loops created by the program in the
+above table. Each bracket marks the counter loop that exists within the program. 
+
+\begin{figure}
+\centering
+
+\includegraphics[width=0.95\textwidth]{figures/3818980958-appdxa-2-3.PNG}
+\caption{Program with multiple looped counters}
+\end{figure}\FloatBarrier
+

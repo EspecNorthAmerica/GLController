@@ -1,0 +1,413 @@
+\documentclass{article}
+\usepackage[landscape]{geometry}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath,amsfonts}
+\usepackage{esint}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}                % include graphics usage
+\usepackage{colortbl,xcolor}
+\usepackage{mathtools}
+
+\usepackage{enumitem}
+\usetikzlibrary{decorations.pathmorphing}
+\makeatletter
+
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+\title{130 Cheat Sheet}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+
+\advance\topmargin-.8in
+\advance\textheight3in
+\advance\textwidth3in
+\advance\oddsidemargin-1.5in
+\advance\evensidemargin-1.5in
+\parindent0pt
+\parskip2pt
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+%\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
+
+%------------------------------------------
+% TEST SECTION ON COPYRIGHT FOOTNOTE
+%------------------------------------------
+
+
+%------------------------------------------
+% BODY OF DOCUMENT
+%------------------------------------------
+\begin{document}
+
+\begin{center}{\huge{\textbf{ESPEC GL Controller Software Ver. 4.0.0 Reference Sheet}}} \\ {\bf{ESPEC North America, INC. $\bullet$ 4141 Central Pkwy $\bullet$ Hudsonville, MI 49426 (USA)}} \\
+\end{center}
+\begin{multicols*}{3}
+
+\tikzstyle{mybox} = [draw=black, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+\tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
+
+%-----------------------------------------
+% Block or Page Section
+%-----------------------------------------
+
+%------------ ESPEC Web Controller ---------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+ESPEC Web Controller V3 (EWC V3) is an embedded computer powered by 
+Debian GNU/Linux. It utilizes a Web browser to display 
+(i.e., host) its user interface (UI) for chamber operation. EWC V3 
+can operate as a standalone machine with its touchscreen to control the chamber or 
+as part of a network. \\
+
+{\bf{Security:}} Both EWC V3 and Debian continually receive security updates. 
+Its root system is configured with read-only access to prevent intruders 
+from exploiting the system. Only authorized users from a PC on the same 
+network can access and control EWC V3. \\   
+
+{\bf{Stability:}} EWC V3 uses a dual-root (stepladder) technique to update its
+firmware. One root system is always in a stable state to ensure an uninterrupted operation. \\
+
+{\bf{Access Privilege \& User Policy:}} EWC V3 is shipped with one user account (called admin)
+with complete powers to manage the system. {\bf{admin}} can enforce a user policy 
+and administer additional accounts with various privileges. 
+
+\end{minipage}
+};
+%------------ Title ----------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {What is ESPEC Web Controller (EWC)?};
+\end{tikzpicture}
+%------------ ESPEC Web Controller ---------------------
+
+%------------ Software/Hardware Requirement ------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+No software installation is required to use EWC V3; only a 
+standard Web browser on the local PC is required  
+to access and control EWC V3. \\
+
+{\bf{Web browser:}} Firefox, Chromium, Google Chrome, Safari, 
+Opera, MS IE (ver. 10+) or Edge. \\ 
+
+{\bf{OS:}} MS Windows, Linux, Mac OS X, Android, Apple. \\
+
+{\bf{Network Requirement:}} EWC V3 and PC must be on the same network. 
+Network is optional for T-series.
+    \end{minipage}
+};
+%------------ Title bar ------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {OS \& Software/Hardware Requirement};
+\end{tikzpicture}
+%------------ Software/Hardware Requirement ------------
+
+
+%------------ Controller Support ---------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+%EWC V3 supports a variety of PLCs: \\ {\bf{ESPEC}} P300, SCP220, ES102;
+EWC V3 supports the following PLCs: \\ {\bf{ESPEC}} P300, SCP220, ES102;  
+    {\bf{Watlow}} F4/F4T; {\bf{Allen Bradley}} ControlLogix, 
+    CompactLogix and Micro8xx series; available for T-series chambers only.
+\end{minipage}
+};
+%------------ Title ----------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {PLC Compatibility};
+\end{tikzpicture}
+%------------ Controller Support ---------------------
+
+%------------ Touchscreen HMI Support ---------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+EWC V3 supports a touchscreen or a standard display for operation. 
+T-series and custom chambers are shipped with EWC V3 and a touchscreen as their default HMI. 
+A touchscreen or a standard display allows EWC V3 to function as a standalone system without 
+joining a network.
+\end{minipage}
+};
+%------------ Title bar ----------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {Touchscreen or Standard Display};
+\end{tikzpicture}
+%------------ Touchscreen HMI ---------------------
+
+
+%------------ Chamber Interface Configuration ---------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+   \begin{minipage}{0.3\textwidth}
+     TCP/IP and Serial interfaces are two different methods used by EWC V3 to
+     communicate with chamber/PLC.
+
+     \begin{itemize}
+        \item {\bf{TCP/IP:}} T-series chamber (Allen Bradley PLC), Watlow F4T. 
+             This protocol offers fast communication between PLC and EWC V3.  
+        \item {\bf{Serial:}} ESPEC P300, SCP220, ES102, Watlow F4. 
+             Default serial interface for P300 is RS-485; SCP220, ES102 and F4 use RS-232C. 
+        \item {\bf{Serial-to-USB:}} A communication interface for a Universal 
+             Web Controller kit (U-Web kit). The U-Web kit is available for purchase to operate on 
+             an existing chamber. 
+     \end{itemize} 
+      
+   \end{minipage}
+};
+%------------ Title bar -------------------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {Chamber Communication Interface};
+\end{tikzpicture}
+%------------ Chamber Interface Configuration ---------------------
+
+
+%------------ Network Configuration & Hostname --------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+EWC V3 supports both DHCP and Static networks. 
+
+   \begin{itemize}
+      \item {\bf{DHCP:}} EWC V3 automatically joins customer DHCP network, using 
+                         a unique IP address.  
+      \item {\bf{Static:}} EWC V3 supports various static network configurations. 
+             On a small and private (Class C) static network, EWC V3 will use
+             its default fallback static IP address {\url{192.168.0.83}} with
+             Subnet 255.255.255.0 and Gateway: 192.168.0.1. Refer to User's Manual for detail. 
+   \end{itemize} 
+On any network, EWC V3 can be accessed via its hostname or IP address. Default 
+hostname from factory is: {\url{http://especSN.local/}}, where {\bf{SN}} is 
+the serial number of the chamber. 
+\end{minipage}
+};
+%------------ Title Bar --------------------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {Network Configuration};
+\end{tikzpicture}
+%------------ Hostname & Network Configuration ---------------------
+
+
+%START------------ User Interface --------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+EWC V3 offers very intuitive operation menus:
+   \begin{itemize}
+      \item {\bf{User:}} An authorized user logs in via this menu; user can also reset 
+                         their password in this menu.  
+      \item {\bf{Overview:}} Chamber current status and operating mode are displayed here. 
+                             It is the home page of EWC V3, after a user has logged in.
+      \item {\bf{Trend:}} Data points accumulated during chamber operation are displayed as a trend graph. 
+                          Data can be downloaded in whole or in portion.
+      \item {\bf{History:}} A history of chamber operation modes, its statistics and alarms, is provided. 
+      \item {\bf{Constant:}} Constant mode settings of Temperature, Humidity, Refrigeration, Vibration and Outputs can be reset.
+      \item {\bf{Program:}} All programmable features of the supported PLCs can be composed into programs to control the chamber. 
+                            This menu offers: (1) compose program; (2) open/view program; (3) preview program output prior to execution; 
+                            (4) edit and/or overwrite existing program; (5) delete program; (6) rename program; 
+                            (7) download or upload programs, and much more.
+      \item {\bf{Start Stop:}} This menu allows an authorized operator to control or manage the chamber in any available 
+                               operation modes: Standby, Constant and Program.
+      \item {\bf{Settings:}} Different configuration settings of EWC V3 and chamber, such as hardware monitor 
+                             (for T-series), network, email, user interface, data logging, date/time, 
+                             user accounts, macro and controller settings, chamber interface, firmware, 
+                             API and Server, can be controlled under this menu.   
+      \item {\bf{About:}} EWC V3 firmware version, end-user information and User's Manual give users full control of the system. 
+   \end{itemize} 
+ 
+\end{minipage}
+};
+%------------ Title Bar --------------------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {User Interface \& Operation Menus};
+\end{tikzpicture}
+%END------------ User Interface ---------------------------------------
+
+
+%START------------ Operation Mode ---------------------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+Overview page showing chamber in program mode with execution time 
+and step being executed. \\
+
+\includegraphics[width=\textwidth]{figures/overview-prog-running.PNG}
+%\includegraphics[width=\textwidth]{figures/tseries-prog-run-001.PNG}
+
+\end{minipage}
+};
+%------------ Title Bar --------------------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {Overview};
+\end{tikzpicture}
+%END------------ Operation Mode ---------------------------------------
+
+%------------ Monitor Page -----------------------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+List of chamber operation statistics with alarms: \\
+
+\includegraphics[width=\textwidth]{figures/history-00.PNG}
+
+\end{minipage}
+};
+%------------ Title Bar --------------------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {History};
+\end{tikzpicture}
+%------------ Monitor Page -----------------------------------------
+
+%START------------ PROGRAM Page -----------------------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+Program can be previewed prior to execution, thus allowing operator
+to see its output in detail.  \\
+
+\includegraphics[width=\textwidth]{figures/program-preview-00.PNG}
+
+\end{minipage}
+};
+%------------ Title Bar --------------------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {Program};
+\end{tikzpicture}
+%------------ Monitor Page -----------------------------------------
+
+%------------ start Stop Menu ------------------------------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+Operator can quickly initiate any operating mode: \\
+
+\includegraphics[width=\textwidth]{figures/start-stop-menu-00.PNG}
+
+Operator may step through the program to study the effects of instructions
+in a specific step. 
+
+\end{minipage}
+};
+%------------ Start Stop Header -----------------------------------
+\node[fancytitle, right=10pt] at (box.north west) {Start Stop};
+\end{tikzpicture}
+%------------ Start Stop ------------------------------------------
+
+%------------ Chamber Interface Configuration ---------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+Interface configuration allows quick \& easy setup: \\
+
+\includegraphics[width=\textwidth]{figures/setting-chamber-interface-00.PNG}
+
+\end{minipage}
+};
+%------------ Chamber Interface Header ----------------------------
+\node[fancytitle, right=10pt] at (box.north west) {Chamber Interface Configuration};
+\end{tikzpicture}
+%------------ Chamber Interface Configuration ---------------------
+
+%------------ Network Display ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+Quick access to other EWC V3 on the local network:
+
+\includegraphics[width=\textwidth]{figures/network-list-001a.PNG}
+
+\end{minipage}
+};
+%------------ Network Display Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Network Display Page};
+\end{tikzpicture}
+
+%------------ Rest API/TCP Forwarder ---------------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+
+{\bf{TCP forwarder}} permits direct access to the controller through EWC V3 
+bypassing Web browser interface, thus allowing operator to talk directly 
+to chamber/controller via text command (e.g., PuTTY). \\
+
+\includegraphics[width=\textwidth]{figures/restAPI-001.PNG}
+
+{\bf{Rest API}} provides a universal way to interact with EWC V3 via three security modes based 
+on different URIs given at each address of EWC V3. 
+
+\end{minipage}
+};
+%------------ TCP Forwarder ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Rest API/TCP Forwarder};
+\end{tikzpicture}
+
+%------------ Firmware Update ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+Each EWC V3 is registered for cloud service support with risk tolerant and
+efficient over-the-air updates.  
+With customer consent, EWC V3 with access to the Internet will receive firmware update through Mender Cloud service provider.  
+\end{minipage}
+};
+%------------ Firmware Update Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Firmware Update \& Cloud Service};
+\end{tikzpicture}
+%
+\columnbreak 
+
+%------------ E-mail Alert ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+\begin{minipage}{0.3\textwidth}
+To guard against extended damage to the chamber when a certain 
+condition arises, an operator can set up an e-mail alert notification. 
+Using the Simple Mail Transfer Protocol or SMTP, EWC V3 
+can notify operators via e-mail regarding the conditions of the 
+chamber(s) such as when alarms went off. In order for this feature to 
+function, EWC V3 must have access to the Internet. 
+Multiple e-mail addresses can be configured to notify different 
+recipients about the conditions of the chamber(s). 
+
+\end{minipage}
+};
+%------------ E-mail Alert Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {E-mail Alert};
+\end{tikzpicture}
+%
+
+%------------ Custom Actions & Macro Editor ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+Custom actions related to chamber's condition and its operation 
+state can be created to monitor and send out an e-mail alert 
+when a certain operation state has reached. A feature known 
+as {\bf{Macro Editor}} allows operators to configure a set of 
+custom actions that will trigger and send out e-mail alerts when 
+a specific condition occurs. Here are examples of the available custom actions: 
+\begin{itemize}
+\item E-mail alert upon program completion
+\item E-mail alert when an alarm goes off
+\item E-mail alert when chamber changes its operation state 
+(e.g., from On to Off, Standby or Constant, etc.)
+\item E-mail alert on control loop parameter
+\item E-mail alert on output time signals
+\item E-mail alert when date/time has changed
+\item Upload data logs to an MS Windows SAMBA share server
+\item Upload data logs via FTP server
+\item Custom trigger (operators' custom scripts)
+\item E-mail alert when parameters from external devices are 
+written to the Web Cotnroller via Modbus TCP/RTU
+\item upload/download custom action configuration
+\end{itemize} 
+
+    \end{minipage}
+};
+%------------ E-mail Alert Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Macro Editor \& Custom Actions};
+\end{tikzpicture}
+%
+{\small {
+\copyright Reference Sheet, Rev. 1.0: January 2025. 
+Features and options on this reference sheet for ESPEC GL Controller, Ver. 4.0.3, 
+are subject to change without notice. 
+}}
+\end{multicols*}
+\end{document}

@@ -1,0 +1,18 @@
+Currently, current Pandoc cannot make a clean conversion from Markdown to LaTeX. 
+The current approach seems to work for now:
+
+1. Execute the "rc-starter.sh" file
+   $ bash rc-starter.sh 
+2. Copy glc.tex to glc-m.tex
+3. Modify/edit "glc-m.tex" with \pagebreak or \newpage in the specified locations
+4. Copy Appendix C.1 from appdx0.tex to appdxc.tex
+5. Run and render PDF process:
+   $ pdflatex glc-man-v4r1.tex       -- first try 
+   $ pdflatex glc-man-v4r1.tex       -- second try 
+   $ pdflatex glc-man-v4r1.tex       -- third try 
+6. PDF file is: 
+   glc-man-v4r1.pdf    
+   
+NOTE: In a perfect world, only (1) is needed. (1) will lead to (6). 
+      Of course, the "glc-m.tex" input in "glc-man-v4r1.tex" will have 
+      to be commented out and "glc.tex" needs to uncommented.  

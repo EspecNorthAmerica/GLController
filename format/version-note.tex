@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%% IN MAIN TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% on back even page %%%%%%%%%%%%%%%%%%%%%%
+% This one works better
+%\pagebreak                 % set new page break 
+\thispagestyle{empty}      % set no page numbering
+% NOTE TO READER ON THIS BLANK PAGE
+% THIS SENTENCE SHOULD BE INCLUDED IF THE LAST PAGE IS ODD.
+%\begin{center}
+%{\large{
+%This page is intentionally left blank.
+%}}
+%\end{center}
+
+\cleartoleftpage           % clear & set left justified 
+\newpage                   % set new page for version note 
+
+% NOTE TO READER ON LAST PAGE
+\begin{center}
+{\large{
+**This is the final page of the document.**
+}}
+\end{center}
+
+% SET VERSION CONTROL BLOCK AT BOTTOM
+~\vfill                   % set empty vertical fill
+\thispagestyle{empty}     % no page number 
+
+% ORIGINAL CODE IN COMMENTED SECTION BELOW
+%%%%%%%%%%%%%%%%%%%% IN MAIN TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% on back even page %%%%%%%%%%%%%%%%%%%%%%
+% This one works better
+\cleartoleftpage
+\newpage    % modified as needed 
+~\vfill
+\thispagestyle{empty}
+
+{\large{ESPEC GL CONTROLLER Software, Version 4.0 Release 1 \\
+USER'S MANUAL}} 
+
+\vspace{0.12in}
+\begin{tabu} to \textwidth {X | [1.5pt] X}
+%  \toprule 
+\tabucline[1.5pt]{-}
+                                & \\
+Original: 1.00: August, 2025   &  Edited and Published by: \\ 
+       & \\
+       & \\
+       & ESPEC North America, Inc. \\
+        & Online: www.espec.com \\
+        & Email: support@espec.com \\
+        & Phone: 616-896-6100 \\                                   & \\
+                                & \\
+                                & \\
+                                & \\
+%   \bottomrule 
+\tabucline[1.5pt]{-}
+\end{tabu}
+%%%%%%%%%%%%%%%%%%%% END OF TEXT ON BACK PAGE %%%%%%%%%%%%%%%%

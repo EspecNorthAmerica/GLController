@@ -1,0 +1,60 @@
+%
+\chapter{Embedded Computer Hardware of GL}
+\label{appdxc-aaeon} 
+
+\section{Specification of AAEON
+Up2Board}
+
+The GL controller software is an embedded computer powered by Debian
+GNU/Linux distribution running as the operating system (OS). The embedded computer hardware is an x86 64-bit architecture system board, called AAEON UP2Board, designed by AEEON. The following figure depicts the top view of the system board. 
+
+\begin{figure}
+\centering
+
+\includegraphics[width=0.95\textwidth]{figures/3394677708-up2board.PNG}
+\caption{Top view of the AAEON Up2Square Board}
+\end{figure}\FloatBarrier
+
+The following hardware specifications are taken from the manufacturer/vendor website: \newline {\url{https://www.aaeon.com/en/product/detail/iot-gateway-maker-boards-up-squared/specification}}
+
+\begin{table2}[label={mynamelabel},nameref={Title}]{Specification of AAEON UP2Board} {\label{tab:hmi-specs}}
+{%
+\begin{tabular}{l | l }
+%\hline 
+{\bf{Component}} & {\bf{Details}} \\
+\hline \hline 
+CPU      & Intel® Celeron® Processor N3350 \\
+Graphics & Intel® HD Graphics \\
+Memory   & Up to 8GB onboard LPDDR4 \\
+Storage  & Up to 128GB onboard eMMC \\
+I/O      & HDMI 1.4b x 1; DP 1.2 x 1 \\
+Camera   & MIPI-CSI via 21 Pin FPC connector x 1; \\
+         & MIPI-CSI via 31 Pin FPC connector x 1 \\
+USB      & USB 2.0 x 2 (via 10 Pin Header x 1); USB 3.2 Gen 1 x 3 (Type-A) \\
+         & USB 3.2 Gen 1 OTG x 1 (Micro B) \\
+Expansion & 40-pin GPIO x 1 \\
+          & Full-sized mPCIe x 1 (PCIe \& SATA [x1], USB2.0 [x1]) \\
+          & M.2 2230 E-Key x 1 (PCIe [x1], USB2.0 [x1]); SATA III x 1 \\
+          & 60 Pin EXHAT x 1 \\
+Display Interface & HDMI 1.4b x 1; DP 1.2 x 1; eDP 1.3 x 1 \\
+Ethernet & GbE x 2 (Realtek 8111H CG) \\
+Security & fTPM \\
+RTC & Yes \\
+OS support & Windows® 10 IoT Enterprise LTSC 2021 \\
+           & Linux Ubuntu 20.04 LTS; Linux Yocto 3.1 \\
+Power & DC 5V / 4-6A \\
+Dimension & 856 mm x 900 mm \\
+%\hline 
+\end{tabular} 
+}
+\end{table2}
+
+For reference, the following figure depicts the Up2Board installed
+inside the electrical box of the test chamber.
+
+\begin{figure}
+\centering
+
+\includegraphics[width=0.95\textwidth]{figures/4146339678-up2board-inst-002.jpg}
+\caption{AEEON Up2Board inside the electrical box of GL chamber}
+\end{figure}\FloatBarrier

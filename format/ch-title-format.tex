@@ -1,0 +1,61 @@
+%
+% This section creates Chapter Title on separate page;
+% and skips page count on the Chapter Title page.
+%
+\usepackage{titlesec}
+\titleformat{\chapter}[display]% command + shape
+{%
+ \normalfont
+ \Large
+ \filcenter
+ \sffamily
+} % format
+{%
+ % set an empty page for chapter title to start on next page 
+ \clearpage
+ %\pagebreak 
+ \thispagestyle{empty}
+ % \thispagestyle
+ % \clearpage
+ %
+ %\pagenumbering{arabic}    % swith to new numbering on page body
+ %
+ \vspace*{\fill}
+ \titlerule[1pt]%
+ \vspace{1pt}%
+ \titlerule
+ \vspace{1pc}%
+ \LARGE\MakeUppercase{\chaptertitlename}~\thechapter%
+}% label
+{
+ 1pc
+}% separation
+{
+ \titlerule
+ \Huge
+} % before
+[%
+ \vspace*{\fill}
+ \thispagestyle{empty}    % chapter title page has no page counter 
+ \clearpage
+ %\addtocounter{page}{-1}  % skip counter on chapter title page 
+]% after
+
+% SECOND FORMAT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This section creates Chapter Title on a separate page.
+% Page number is printed centered at the bottom.
+%
+%\usepackage{titlesec}
+
+%\titleformat{\chapter}[display]
+%{\normalfont\Large\filcenter\sffamily}
+%{\vspace*{\fill}
+%    \titlerule[1pt] %
+%    \vspace{1pt} %
+%    \titlerule
+%    \vspace{1pc} %
+%    \LARGE\MakeUppercase{\chaptertitlename}~\thechapter}
+%{1pc}
+%{\titlerule\Huge}
+%[\vspace*{\fill}\newpage]

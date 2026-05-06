@@ -1,3 +1,6 @@
+## General files and folders
+figures/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

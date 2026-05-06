@@ -1,0 +1,1200 @@
+\chapter{APPENDIX}
+
+
+\section{A.1 Program Creation
+Sheet}
+
+Sometimes, it is helpful to construct a table to outline the steps of
+the program before entering them into the GL controller program editor
+(see Section 5.3). The following table illustrates an example how to
+prepare these steps. This program conducts \emph{test} on temperature
+fluctuation.
+
+\begin{longtable}[]{@{}lllllllllll@{}}
+\toprule
+\begin{minipage}[b]{0.09\columnwidth}\raggedright
+Step No.\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
+Temp SP\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright
+Temp Mode\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+Humi SP\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+Humid Mode\strut
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+Time (hr:min)\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Refrig\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+TS 1\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
+TS 2\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
+Counter Step\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
+Counter Count\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.09\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+-30\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.09\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.09\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.09\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+65\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.09\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+180\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.09\columnwidth}\raggedright
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Here is another program that performs Low Humidity test. This program
+requires a chamber with humidity option. As illustrated in the following
+Table, deviation soak between plus and minus 10 have been utilized. Both
+temperature and humidity have been controlled via \emph{soak}. Time
+signal TS 9 and TS 10 have been utilized. \textbf{\emph{Note:}} TS 1 and
+2 are generally the default time signals.
+
+\begin{longtable}[]{@{}lllllllllllll@{}}
+\toprule
+\begin{minipage}[b]{0.06\columnwidth}\raggedright
+Step No.\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+Temp Mode\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
+Temp SP\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+Dev(+)\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+Dev(-)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+Humi Mode\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
+Humi SP\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
+Duration\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+Refrig\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
+TS9\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
+Ts10\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
+Counter Step\strut
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+Counter Loop\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+60\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+15\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+15\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+15\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+7\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+9\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+11\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+12\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+45\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.06\columnwidth}\raggedright
+13\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+-10\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Soak\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+80\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+2:00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+
+\section{A.2 Program Creation
+Sheet}
+
+Copy and use the following programming table to prepare a program.
+
+\begin{longtable}[]{@{}llllllllllllllllll@{}}
+\toprule
+Step & Temp & Humi & Time & Soak & Refrig & 1 & 2 & 3 & 4 & 5 & 6 & 7 &
+8 & 9 & 10 & 11 & 12\tabularnewline
+\midrule
+\endhead
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+& & & & & & & & & & & & & & & & &\tabularnewline
+\bottomrule
+\end{longtable}
+
+Programming optional features.
+
+Processing at End of Operation
+
+☐ Stop; ☐ Power OFF; ☐ Hold Last Step. ☐ Constant Operation
+(No.~1)(No.~2)(No.~3) ☐ Operate Next Program No.~( ), Step ( ) Example:
+☑ Stop
+
+Counter A
+
+Repeat Cycle: Repeating Start Step ( ) Step ; Repeating End Step ( )
+Step
+
+Counter B
+
+Repeat Cycle: Repeating Start Step ( ) Step ; Repeating End Step ( )
+Step
+
+Start Setting (Ramp Operation)
+
+☐ Process Value ☐ Set Point ( °C) ( \%RH) Example: ☑ Ste Point (35°C)
+(25\%RH)
+
+\textbf{\emph{Note:}} GL controller supports multiple counters which
+therefore will not be limited to just Counter A and Counter B. Each
+counter and its loop can be invoked by entering the loop number under
+the \emph{Counter} column (refer to the first table in this Appendix)
+and then set the start step. Multiple counters can be created by
+manipulating the start/stop step. The following table illustrates how
+counters are manipulated in a program.
+
+\begin{longtable}[]{@{}lllllllllll@{}}
+\toprule
+\begin{minipage}[b]{0.08\columnwidth}\raggedright
+Step No.\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
+Temp SP\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright
+Temp Mode\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+Humi SP\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
+Humid Mode\strut
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+Time (hr:min)\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
+Refrig\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+TS 1\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
+TS 2\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
+Counter Step\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedright
+Counter Count\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+-30\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+0\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+3\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+65\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+2\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+180\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+Soak Ctrl\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright
+On\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
+Off\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+1:00:00\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+Auto\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedright
+4\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+The following figure depicts the loops created by the program in the
+above table.
+
+\begin{figure}
+\centering
+
+\includegraphics[width=0.95\textwidth]{figures/3818980958-appdxa-2-3.PNG}
+\caption{Program with multiple looped counters}
+\end{figure}\FloatBarrier
+
+
+\section{B.1 Specification of HMI (Touch Screen
+Display)}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\begin{minipage}[b]{0.15\columnwidth}\raggedright
+Item\strut
+\end{minipage} & \begin{minipage}[b]{0.54\columnwidth}\raggedright
+Specification\strut
+\end{minipage} & \begin{minipage}[b]{0.22\columnwidth}\raggedright
+Application\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.15\columnwidth}\raggedright
+HMI / Display\strut
+\end{minipage} & \begin{minipage}[t]{0.54\columnwidth}\raggedright
+10.1-inch High Resolution Capacitive Touch Display Display Panel: IPS
+Resolution: 1280x800 pixels View Angle: 178 ° Hi-Fi Speakers: 8 Ohms 1
+Watt High brightness: 350 cd/m2 Refresh Rate: 60 Hz Video Interface:
+HDMI Touch Panel Interface: USB-C Power Supply: Power Jack (DC 7.0V -
+14.0V)\strut
+\end{minipage} & \begin{minipage}[t]{0.22\columnwidth}\raggedright
+User Interface for GL Controller and Chamber Operation\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+
+\section{C.1 Specification of AAEON
+Up2Board}
+
+The GL controller software is an embedded computer powered by Debian
+GNU/Linux distribution running as the operating system (OS). The
+embedded computer hardware is an x86 64-bit architecture system board,
+called AAEON UP2Board, designed by AEEON. The following figure depicts
+the top view of the system board.
+
+\begin{figure}
+\centering
+
+\includegraphics[width=0.95\textwidth]{figures/3394677708-up2board.PNG}
+\caption{Top view of the AAEON Up2Square Board}
+\end{figure}\FloatBarrier
+
+The following hardware specifications are taken from the
+manufacturer/vendor website: The specs listed in the above table may be
+found here:
+\href{https://www.aaeon.com/en/product/detail/iot-gateway-maker-boards-up-squared/specification}{AEEON}.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.29\columnwidth}\raggedright
+Component\strut
+\end{minipage} & \begin{minipage}[b]{0.65\columnwidth}\raggedright
+Details\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+CPU\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+Intel® Celeron® Processor N3350\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Graphics\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+Intel® HD Graphics\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Memory\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+Up to 8GB onboard LPDDR4\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Storage\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+Up to 128GB onboard eMMC\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+I/O\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+HDMI 1.4b x 1; DP 1.2 x 1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Camera\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+MIPI-CSI via 21 Pin FPC connector x 1; MIPI-CSI via 31 Pin FPC connector
+x 1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+USB\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+USB 2.0 x 2 (via 10 Pin Header x 1); USB 3.2 Gen 1 x 3 (Type-A); USB 3.2
+Gen 1 OTG x 1 (Micro B)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Expansion\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+40-pin GPIO x 1; Full-sized mPCIe x 1 (PCIe \& SATA {[}x1{]}, USB2.0
+{[}x1{]}); M.2 2230 E-Key x 1 (PCIe {[}x1{]}, USB2.0 {[}x1{]}); SATA III
+x 1; 60 Pin EXHAT x 1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Display Interface\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+HDMI 1.4b x 1; DP 1.2 x 1; eDP 1.3 x 1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Ethernet\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+GbE x 2 (Realtek 8111H CG)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Security\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+fTPM\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+RTC\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+Yes\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+OS support\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+Windows® 10 IoT Enterprise LTSC 2021; Windows IoT Core Linux Ubuntu
+20.04 LTS; Linux Yocto 3.1\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Power\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+DC 5V / 4-6A\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.29\columnwidth}\raggedright
+Dimension\strut
+\end{minipage} & \begin{minipage}[t]{0.65\columnwidth}\raggedright
+856 mm x 900 mm\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+For reference, the following figure depicts the Up2Board installed
+inside the electrical box of the test chamber.
+
+\begin{figure}
+\centering
+
+\includegraphics[width=0.95\textwidth]{figures/4146339678-up2board-inst-002.jpg}
+\caption{AEEON Up2Board inside the electrical box of GL chamber}
+\end{figure}\FloatBarrier
+
+
+\section{D.1 FAQ}
+
+Answers to frequently asked questions (FAQ) are compiled, summarized and
+displayed in the following table. \textbf{\emph{Note:}} As more FAQ and
+answers become available, they will be appended in the table for future
+release.
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\begin{minipage}[b]{0.08\columnwidth}\raggedright
+No.\strut
+\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
+Question\strut
+\end{minipage} & \begin{minipage}[b]{0.33\columnwidth}\raggedright
+Answer\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright
+Reference\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+I want to change the buzzer operation in the event of the occurrence of
+an ``alarm or warning.''\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+ON/OFF switch can be controlled via {[}Setup{]} → {[}Configuration{]} →
+{[}Set Sound{]}. If the beep is turned off, alarm and warning are
+indicated only with red notifications on the HMI.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+2.8 Setting the Alarm and Warning Buzzer\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+What should I do when a system abnormality has occurred?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Notify the sales representative or customer support for
+assistance.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+I want to turn off the HMI immediately.\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+To turn off the HMI immediately, press {[}Setup{]} → {[}Configuration{]}
+→ {[}Display Setup{]}, then press \textbf{Turn Off Display}. To turn it
+back on, tab your finger on the screen.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+7.9.1 Display Setup on HMI\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+I want to set the HMI in sleep mode.\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Several options are available for setting the HMI in sleep mode. Press
+{[}Setup{]} → {[}Configuration{]} → {[}Display Setup{]}, then select
+\textbf{HMI Screensaver timeout}. To turn it back on, tab your finger on
+the screen.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+7.9.1 Display Setup on HMI\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+``OFF'' is displayed for a setup value.\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+When the equipment is stopped or the humidity control is set to OFF,
+``OFF'' is displayed.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+2.3.3 Monitor\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+``---'' is displayed as the temperature (humidity) process value.\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+If the temperature (humidity) process value is abnormal or the humidity
+control is set to OFF, ``---'' is displayed.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+2.3.3 Monitor\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+7\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+I want to change the refrigeration setup from Auto to Manual (arbitrary
+state).\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Access {[}Set Mode{]}, select a Constant setup, then apply refrigeration
+manual setting as needed. When you want to change the mode from Auto to
+Manual during operation, make the manual setting first.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+4.3 Refrigeration Setting\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+When is the setting of time enabled?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+At the moment when the time signal is set, the contact output in
+question changes Contact rating: 250VAC, 5A\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+9\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Is the trend graph data erased when the circuit breaker is turned off or
+when power failure occurs?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Data are stored in the non-volatile memory of the GL controller system;
+they cannot not be erased by power failure or shutdown.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+4.9.7 Monitor: Trend; 4.9.8 Trend Graph Manipulation Buttons\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+What is the ramp operation?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+The ramp operation is to control the temperatures from the set point of
+the previous step to that of the present step at a certain ramp.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+5.3.1 Step-Wise Programming\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+11\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+What is the soak time control?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+After the operation of the step is started, the equipment waits until
+the process value attains the attainment range of the set point, and
+then starts the counting of time. Thus, the soak time in the temperature
+set point is the same as the setup time.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+5.3.1 Step-Wise Programming\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+12\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Can the soak time and ramp control be set simultaneously?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+The ramp control and soak time cannot be set simultaneously.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+5.3.1 Step-Wise Programming\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+13\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Can the program in operation be edited or saved?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+During program execution, that program can be loaded into the program
+editor for editing, but the edited version cannot be saved back in the
+same slot that was loaded from for execution; it can however be saved in
+a different slot (and under a different name).\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+5.6.4 Manipulating a Program during its Execution\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+14\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Can the program in operation be deleted?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+During program execution, that program cannot be deleted.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+5.6.4 Manipulating a Program during its Execution\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+15\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Can the program contain loops (counters) to reduce the number of
+steps?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Program may contain multiple loops (i.e., counters) to repeat steps or
+groups of steps.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+5.3.1 Step-Wise programming; 5.3.6 Example 6: Setting Multiple Counters
+in a Program\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+16\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Can I connect my GL chamber to my main network and access it
+remotely?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Your GL chamber can join the main network using DHCP or static. The UI
+can be accessed via a Web browser.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+8 Network Setup \& Remote Access\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+17\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Can I set my GL chamber to use a static IP address on the network?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Your GL chamber can use a static IP address on a static network\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+8.5 Custom Static Network\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+18\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+Can I access other GL chambers on the network?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+Working with multiple GL chambers on the network, you can choose one GL
+controller (on the network) to monitor other GL chambers on the
+network.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+2.1 GL Controller Operation Options; 9 Network Monitor\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+19\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+When I issue set command to set a new temp value via TCP/IP
+communication, the system responds with PROTECT ON.\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+If remote TCP/IP communication was set to Monitor only, set command
+cannot be issued. Enable remote TCP/IP communication with Monitor and
+Control.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+2.10.1 Remote Communication Options; 6.5 Set Protection\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+How do I enter the password to log in on the HMI?\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+To enter the password to log in on the HMI, the floating input keyboard
+must be enabled via the hamburger menu.\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright
+2.6.3 How to Log in via HMI\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+

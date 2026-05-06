@@ -1,0 +1,126 @@
+% author: Paul Nong-Laolam, Software Engineer, pnong-laolam@espec.com
+% date: 12/2020; 1/2021
+%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COMMENT everything below 
+% THIS IS THE ORIGINAL 
+%\begin{titlepage}
+% \includegraphics[width=1.05\textwidth]{front-cover-image/espec-logo.png}
+%   \vspace*{\stretch{1.00}}  % 1.25 
+%   \begin{center}
+%      \Large\bf{ESPEC GL CONTROLLER}\\
+%      \large\sl{Version 4.0} \\
+%      \large\bf{USER'S MANUAL} 
+%   \end{center}
+%   \vspace*{\stretch{1.75}} % old value: 2.0
+%\begin{tcolorbox}
+%\begin{itemize}
+% \renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+%\item Read this operation manual thoroughly before operating the equipment.
+%\item Familiarize yourself with all safety precautions before using the equipment.
+%\item Keep this operation manual handy for future reference.  
+%\end{itemize}
+%\end{tcolorbox}
+%  \begin{center}
+%      \large\bf{ESPEC NORTH AMERICA, INC.}
+%  \end{center}
+%\end{titlepage}
+
+%%%%%NEW EXP TITLE PAGE
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+%\node[inner sep=0pt] (background) at (current page.center) {
+%   \includegraphics[width=\paperwidth]{./front-cover-image/front-cover3.png}
+%}; % good one
+
+\node[inner sep=0pt] (background) at (current page.center) {
+   \includegraphics[width=0.98\paperwidth,height=0.98\paperheight]{./front-cover-image/full-cover.PNG}
+   %\includegraphics[width=\paperwidth]{./front-cover-image/full-cover.PNG} % original setting 
+}; % better one
+
+\definecolor{ocre}          % defining ocre color 
+          {RGB}{243,102,25} % Define the orange color used for 
+                            % highlighting throughout the book
+
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.01,text opacity=1,inner sep=1cm]
+      {\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}
+           {\centering  ESPEC GL CONTROLLER \\ %[18pt]                   % Book title
+           {\huge Software, Version 4.0.0}\\  %[20pt]                      % Subtitle           
+           %{\Large Sixth Edition }\\ % [20pt]                           % Edition
+           \vspace{0.5in} 
+           %{\huge Paul Nong-Laolam} \\                                  % Author name
+           {\huge USER'S MANUAL} \\                                      % Subtitle
+           %{\huge ESPEC North America, Inc.} \\                         % Affilliation/Company
+           }
+      };                                     
+\end{tikzpicture}
+\vfill
+\endgroup
+%%%%%%%% END NEW TITLE PAGE 
+
+%%%%%%%%%%%%%%%%%%%%%%%% COPYRIGHT PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage             % set page break for Copyright page    
+~\vfill              % set text bottom flush, 
+                     % filling from bottom upward 
+\thispagestyle{empty}
+
+\noindent {\LARGE {\bf{Copyright Notice}} }
+
+%\vspace{0.125in}
+\noindent Copyright \copyright\ ESPEC North America, Inc. 2025 \\ % Copyright notice
+%\noindent \textsc{book-website.com}\\ % URL
+
+%\vspace{0.25in}
+\noindent All rights reserved. This document is provided for lawful purposes only. Modification of this document--textual, graphical or other content that includes the applicable copyright, trademark or other proprietary rights notice--is strictly prohibited. You are authorized only to view, copy, print and use this document insofar as the content is used for internal business, personal, non-commerical or educational purposes. \\
+
+%\vspace{0.25in}
+\noindent {\LARGE {\bf{Trademark}} } % Disclaimer notice 
+
+%\vspace{0.125in}
+Any brand, product, service and process names appearing in this document are trademarks of their respective holders. Reference to or use of a brand, product, service, or process does not imply recommendation, approval, affiliation, or sponsorship of that brand, product, service, or process by ESPEC North America, Inc. Nothing contained herein shall be construed as conferring by implication, estoppel, or otherwise any 
+license or right under any patent, copyright, trademark, or other intellectual property right of ours or any third party, except as expressly granted herein. \\
+
+%\vspace{0.25in}
+\noindent {\LARGE {\bf{Disclaimer \& Liability}} }  % Disclaimer notice 
+%\vspace{0.125in}
+
+\noindent ESPEC North America, Inc. assumes no responsibility for accidents or equipment trouble that comes from the failure to observe handling instructions contained in this user manual. ESPEC North America, Inc. shall not have liability for any hardware, software, or data stored or used with the product, including the costs of repairing, replacing, integrating, installing or recovering such hardware, software, or data. Do not perform any operation or handle the chamber in any way that is not described in this manual or that is specifically prohibited. The contents of this user manual are subject to change without prior notice. \\
+
+%\vspace{0.125in}
+\begin{tcolorbox}
+\begin{itemize}
+ \renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+\item Read this operation manual thoroughly before operating the equipment.
+\item Familiarize yourself with all safety precautions before using the equipment.
+\item Keep this operation manual handy for future reference.  
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.125in}
+%Read this manual thoroughly and familiarize yourself with all safety precautions 
+%before using equipment. \\
+
+%\vspace{0.25in}
+\noindent {\LARGE {\bf{Regulatory Compliance}} } 
+
+%\vspace{0.125in}
+\noindent Products with the CE label comply with the Directives and European Standards 
+applicable at the time of certification. Specific Directives and Standards will be 
+listed on provided Declaration of Conformity when applicable.
+
+%%%%%%%%%%%%%%%%%%%% CAUTION NOTICE %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage               % set page break
+%\vspace*{\fill}        % setting veritcal fill
+%\begin{tcolorbox}
+%\begin{itemize}
+% \renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+%\item Read this operation manual thoroughyl before operating the equipment.
+%\item Familiarize yourself with all safety precautions before using the equipment.
+%\item Keep this operation manual handy for future reference.  
+%\end{itemize}
+%\end{tcolorbox}
+%\vspace*{\fill}        % end setting of vertical fill 
+%%%%%%%%%%%%%%%%%%%% END CAUTION NOTICE %%%%%%%%%%%%%%%%%%%%%%%%

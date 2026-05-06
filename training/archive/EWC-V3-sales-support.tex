@@ -1,0 +1,574 @@
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% Modified (c) 2022 by Paul Nong-Laolam
+% for ESPEC North America, INC. Web Controller V3 training distribution 
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\documentclass{beamer}
+% Replace the \documentclass declaration above
+% with the following two lines to typeset your 
+% lecture notes as a handout:
+%\documentclass{article}
+%\usepackage{beamerarticle}
+
+
+% There are many different themes available for Beamer. A comprehensive
+% list with examples is given here:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+% You can uncomment the themes below if you would like to use a different
+% one:
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%cis275-ch6-w22.pdf\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{boxes}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{default}
+%\usetheme{Frankfurt}
+\usetheme{Goettingen}  % selected for usage
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% Figures
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{verbatim} 
+
+% menu keys
+\usepackage[os=win]{menukeys}        % use key obxes
+\renewmenumacro{\keys}[+]{shadowedroundedkeys}
+
+\title{ESPEC Web Controller V3}
+
+% A subtitle is optional and this may be deleted
+\subtitle{Introducing Web Controller V3: Sales}
+
+\author{Paul Nong-Laolam}%\inst{1} } %\and S.~Another\inst{2}}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[Universities of Somewhere and Elsewhere] % (optional, but mostly needed)
+{
+  %\inst{1}%
+  ESPEC North America, INC \\ 
+  4141 Central Parkway \\
+  Hudsonville, Michigan 49426 \\ (USA) 
+  %\and
+  %\inst{2}%
+  %Department of Theoretical Philosophy\\
+  %University of Elsewhere
+  }
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date{5/25/2022}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+\subject{Software} % \subjectComputer Science}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+% Let's get started
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{ESPEC Web Controller, V3}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+\section{1. Introduction}
+
+\begin{frame}{1.0: Introduction}{} 
+The release of ESPEC Web Controller V3 is a major one in terms of features 
+and capabilities. ESPEC Web Controller V3 (EWC) is an embedded computer. 
+Its hardware is based on an x86 architecture, called Up2Board (pictured below); 
+its operating system is based on a Debian GNU/Linux distribution. 
+\begin{figure} [hbt!] 
+\centering
+\includegraphics[scale=.30]{figures/up2board-io-002.PNG}
+\caption{EWC Up2Board with input/output ports}
+\end{figure}
+\end{frame}
+
+\begin{frame}{1.1: Features}{} 
+\begin{itemize}
+   \item {\bf{Security:}} GNU/Linux, by default, is a secure system. 
+Its root system is configured with Read-Only access to prevent any intruder from exploiting the system; 
+hence, EWC V3 is extremely secure. Only authorized users from a PC on the same network can access and control EWC V3. 
+
+   \item {\bf{Stability:}} EWC V3 uses a dual-root system to provide a smooth update. One root system is
+always in a stable state to provide uninterrupted operation. 
+
+   \item {\bf{Access Privilege \& User Policy:}} For security and chamber operation protection, only 
+authorized users can access and control EWC V3. The software is shipped with an 
+administrator account. This administrator can set user policy on EWC V3 by creating 
+additional accounts with various privileges.
+
+\end{itemize}
+\end{frame} 
+
+
+\begin{frame}{1.2:Features}{}
+EWC V3 has several new features (compared to its predecessor, V2.5).
+\begin{itemize}
+   \item {\bf{Touchscreen:}} 
+    If ESPEC Web Controller detects a monitor connected to its HDMI or video display port, 
+    it automatically displays the user interface (UI) on the detected monitor (HMI) for 
+    operations.
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.30]{figures/touchscreen-panel-001a.PNG}  
+      \caption{EWC with its Touchscreen panel (HMI)}
+    \end{figure}
+\end{itemize}  
+\end{frame}            
+ 
+
+\begin{frame}{1.3: Features}{} 
+\begin{itemize}
+   \item {\bf{Cloud Service:}} Each EWC V3 has a unique registration number based on the chamber
+                               serial number.
+
+    \begin{figure} [hbt!] 
+      \centering
+%      \includegraphics[scale=.30]{figures/menderio-cloud-001.PNG}  
+      \includegraphics[scale=.350]{figures/mender-cloud-service-002.PNG}
+      \caption{EWC subscribes to MenderIO cloud service}
+    \end{figure}
+\end{itemize}
+\end{frame} 
+
+
+\begin{frame}{1.4: Features}{}
+EWC V3 got a new makeover; a completely new UI.  
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.18]{figures/homepage-001.PNG}  
+      \caption{ESPEC Web Controller homepage}
+    \end{figure}
+
+\begin{itemize}  
+   \item {\bf{Menu bar:}} Access to all the system's menus to control and operate the chamber 
+   \item {\bf{Status Bar:}} Display of current status or conditions of the chamber
+   \item {\bf{User Account:}} Shipped with only one account type (administrator) 
+   \item {\bf{User's Manual:}} Has embedded User's Manual   
+\end{itemize} 
+\end{frame} 
+
+
+\begin{frame}{1.5: Features}{}
+
+EWC V3 touchscreen display vs. Web browser display (PC). 
+
+\begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.18]{figures/onscreen-login-001a.PNG}  
+      \caption{ESPEC Web Controller homepage on touchscreen}
+\end{figure}
+
+\begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.18]{figures/desktop-login-001.PNG}  
+      \caption{ESPEC Web Controller homepage on Web browser (PC)}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{1.6:Capabilities }{}
+
+ESPEC Web Controller V3 currently supports the following controllers (PLCs): 
+\begin{itemize}
+   \item {\bf{T-Series Chamber:}} Allen Bradley CompatLogix, ControlLogix and Micro8xx series.\\ 
+                                  {\it{Note}}: Touchscreen monitor is the default HMI for Web Controller and 
+                                  T-series chambers.  
+   \item {\bf{ESPEC Chambers:}} ESPEC P300, SCP220 \\
+                                {\it{Note}}: ES102 to be added in the next release, V3.2.
+   \item {\bf{Watlow:}} F4T and F4 \\
+                        {\it{Note}}: Chamber equipped with F4T has options for touchscreen monitor
+                                     as default HMI for Web Controller; available as a custom chamber.  
+\end{itemize}
+
+Communication between EWC V3 and Chamber (default):
+\begin{enumerate}
+   \item {\bf{TCP/IP Interface:}} T-series and F4T 
+   \item {\bf{Serial Interface:}} P300, SCP220, ES102, F4 
+\end{enumerate}
+
+\end{frame}
+
+\section{2. Configuration at the Factory} 
+
+\begin{frame}{2.0: Web Controller Install and Setup}
+Production has a check list to complete the Web Controller installation and configuration
+prior to shipping the product.
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.22]{figures/chamber-config-completion-001.PNG}  
+      \caption{ESPEC Web Controller setup checklist}
+    \end{figure}
+
+Installation and configuration are complete when all three items 
+are passed with a checkmark (as shown above). 
+Customer (or Service Tech) will not see above list when they start the Web Controller.   
+
+\end{frame}
+
+\begin{frame}{2.1: Factory Configuration: Incomplete}
+Examples of incomplete factory configuration of Web Controller. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.22]{figures/chamber-cfg-all-fail-001.PNG}  \\
+      \caption{All failed}
+    \end{figure}
+Customer (or Service Tech) will see this page when they first start the Web Controller. 
+\end{frame}
+
+\begin{frame}{2.2: Factory Configuration: Incomplete}{}
+Examples of incomplete factory configuration of Web Controller. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.22]{figures/chamber-connect-fails-001.PNG}  \\
+      \caption{Chamber interface configuration incomplete}
+    \end{figure}
+
+Customer (or Service Tech) will see this page when they first start the Web Controller. 
+
+\end{frame}
+
+\begin{frame}{2.3: Factory Configuration: Incomplete}{}
+Examples of incomplete factory configuration of Web Controller. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.22]{figures/chamber-data-storage-fail-001.PNG}  \\
+      \caption{Persistent data storage failed detection}
+    \end{figure}
+
+Customer (or Service Tech) will see this page when they first start the Web Controller. 
+
+\end{frame}
+
+\section{3. Troubleshooting at Customer Facility}
+
+\begin{frame}{3.0: Hardware Setup \& Chamber Interface Config}{} 
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.22]{figures/f4t-up2board-io-001.PNG}  \\
+      \caption{Web Controller hardware and its input/output ports}
+    \end{figure}
+\begin{itemize}
+   \item {\bf{F4T:}} 
+             \begin{itemize}
+                \item {\bf{TCP/IP:}} Default interface using an internal network setup. 
+                              Step-by-step procedure will be provided to set up
+                              this internal network.  
+                \item {\bf{ModbusRTU (RS-232):}} If Module 6 is installed in F4T. 
+                \item {\bf{USB-to-RS-232:}} Uses USB-to-RS-232 converter (only for U-Web kit),
+                           but TCP/IP is default option.
+
+             \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{3.1: Hardware Setup \& Chamber Interface Config}{} 
+\begin{itemize}
+   \item {\bf{P300:}} 
+             \begin{itemize}
+                \item {\bf{RS-485}} (default) on P300 (5-pin) interface port. 
+                \item {\bf{RS-232C}} 3-pin interface port; must enable it via the P300 HMI.
+                \item {\bf{USB-to-RS-232:}} Uses USB-to-RS-232 converter (only for U-Web kit). 
+
+             \end{itemize}
+   \item {\bf{SCP220/F4:}} 
+             \begin{itemize}
+                \item {\bf{RS-232C}} 3-pin interface port; must enable it via the SCP220 HMI.
+                \item {\bf{USB-to-RS-232:}} Uses USB-to-RS-232 converter (only for U-Web kit). 
+             \end{itemize}
+
+   \item {\bf{Allen Bradley (T-series):}} 
+             \begin{itemize}
+                \item The T-series connection is via TCP/IP but it uses a different internal network setup compared to F4T. The Web Controller automatically assigns its IP address for that internal network.
+             \end{itemize}
+
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{3.2: Connecting to F4T}{} 
+EWC V3 and F4T communicate through TCP/IP interface. Confirm that
+connections are set up as follows: 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.25]{figures/up2board-to-f4t.PNG}  \\
+      \caption{F4T and Web Controller connection}
+    \end{figure}
+
+Step-by-step procedure for configuring F4T internal network will be provided.  
+\end{frame}
+
+\begin{frame}{3.3: Connecting to P300}{} 
+RS-232/RS-485 is the standard communication interface for P300 (including SCP220 and F4). P300 uses the 5-pin RS-485 for default communication. Correct pin configuration is required for RS-485 or RS-232: 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.35]{figures/p300-jumper-setting-0a.PNG}  \\
+      \caption{RS-485 jumper setting on Up2Board for P300 communication}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{3.4: Connecting to SCP220/P300/F4}{} 
+RS-232 is the standard communication interface for SCP220 and F4. P300 can its 3-pin RS-232C for communication. Correct pin configuration is required for RS-232: 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.37]{figures/scp220-jumper-setting-0a.PNG}  \\
+      \caption{RS-232 jumper setting on Up2Board for SCP220/F4 and P300 (3-pin) COMM}
+    \end{figure}
+
+\end{frame}
+
+\section{4. Chamber Interface Configuration on Web Controller}
+
+\begin{frame}{4.0: Chamber Interface Configuration: F4T}{} 
+Communication between Web Controller and Chamber is possible only when chamber interface configuration is done correctly, as shown in the following screenshots. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/f4t-cfg-001.PNG}  \\
+      \caption{Setup Wizard chamber interface configuration for F4T}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{4.1: Chamber Interface Configuration: T-series}{} 
+Communication between Web Controller and Chamber is possible only when chamber interface configuration is done correctly, as shown in the following screenshots. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/t-series-cfg-001.PNG}  \\
+      \caption{Setup Wizard chamber interface configuration for T-series chamber}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{4.2: Chamber Interface Configuration:P300}{} 
+Communication between Web Controller and Chamber is possible only when chamber interface configuration is done correctly, as shown in the following screenshots. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/p300-cfg-001.PNG}  \\
+      \caption{Setup Wizard chamber interface configuration for F4T}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{4.3: Chamber Interface Configuration: SCP220}{} 
+Communication between Web Controller and Chamber is possible only when chamber interface configuration is done correctly, as shown in the following screenshots. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/scp220-cfg-001.PNG}  \\
+      \caption{Setup Wizard chamber interface configuration for SCP220}
+    \end{figure}
+
+\end{frame}
+
+\section{5. Reconfigure Chamber Interface Communication}
+
+\begin{frame}{5.0: Chamber Communication Error: No response}{} 
+Example of chamber interface configuration error; no communication: chamber/controller does not respond to Web Controller. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/web-controller-comm-issue-001.PNG}  \\
+      \caption{EWC V3 attempting to communicate with the chamber}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{5.1: Chamber Communication Error: No response}{} 
+Example of chamber interface configuration error; no communication: chamber/controller does not respond to Web Controller. After several attempts, Web Controller displays error message (as depicted below): 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/web-controller-comm-issue-002.PNG}  \\
+      \caption{EWC V3 attempting to communicate with the chamber}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{5.2: Chamber Interface Config: Settings Menu}{} 
+Chamber interface configuration can be established via the {\bf{Settings}} menu: {\keys{Settings}} $\rightarrow$ {\keys{Chamber Interface}}.   
+
+\begin{itemize}
+   \item {\bf{Chamber Category:}} Specific category of chamber is marked as EGN, EN, EP, EQ, EWP, T-series. 
+   \item {\bf{Model/Type Selection:}} U, L, Z or X.  \\
+                            {\it{Note}}: T-series model/type list is available as separate option only 
+                            when T-series chamber category is selected. 
+   \item {\bf{Controller:}} P300, SCP220, ES102, F4, F4T. 
+   \item {\bf{COMM Interface:}} TCP/IP is default interface for T-series and F4T. Serial is default for P300, SCP220, ES102, F4. Serial connect can be used for F4T by selecting {\bf{Interface Type}}. 
+   \item {\bf{Optional Features:}} These features can be selected based on chamber's available options. 
+\end{itemize} 
+
+\end{frame}
+
+
+\begin{frame}{5.3: Chamber Interface Config: Settings Menu}{} 
+Example of chamber interface configuration for a Platinous series with SCP220 controller via a serial interface. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/platinous-scp220-cfg-001.PNG}  \\
+      \caption{Interface configuration for Platinous chamber with SCP220 via Serial interface}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{5.4: Chamber Interface Config: Settings Menu}{} 
+Example of chamber interface configuration for a Platinous series with F4T using the Platinous H logic control option. 
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/chamber-interface-setting-001.PNG}  \\
+      \caption{Interface configuration for Platinous chamber with F4T via a TCP/IP interface}
+    \end{figure}
+
+\end{frame}
+
+\section{6. Universal Web Controller Kit} 
+
+\begin{frame}{6.0: U-Web Kit Support: COMM Interface}{} 
+
+The Universal Web Server (Controller) kit continues with its standard configuration options. Default communication with F4T is via TCP/IP; with other chamber/controllers, it will use the serial COMM via the Serial-to-USB interface, as shown below.  
+
+    \begin{figure} [hbt!] 
+      \centering
+      \includegraphics[scale=.220]{figures/webkit0.PNG}  \\
+      \caption{U Web kit hardware in box and bare}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{6.1: U-Web Kit Support: New Features}{} 
+
+\begin{itemize}
+
+   \item Service or Sales must obtain serial number of customer's chamber to process and prepare the U-Web kit before shipment. This serial number is required for Web Controller registration. Service or Production (or software engineer) will prepare the U-Web kit. 
+
+\vspace{0.125in}
+
+   \item With the new EWC V3  preconfiguration, U-Web kit prep follows the same protocol of Web Controller install and setup as outlined on slide 2.0. Incomplete factory configuration leads to one of three issues as shown on slides 2.1, 2.2, 2.3. 
+
+\vspace{0.125in}
+
+\begin{enumerate}
+   \item Persistent data storage error: Fixable in the field.
+   \item Chamber configuration: Fixable in the field.
+   \item Chamber registration: Would need to return to factory.
+\end{enumerate}
+
+\end{itemize} 
+
+\end{frame}
+
+
+% All of the following is optional and typically not needed. 
+\appendix
+\section<presentation>*{\appendixname}
+\subsection<presentation>*{References}
+
+\begin{frame}[allowframebreaks]
+  \frametitle<presentation>{References}
+    
+  \begin{thebibliography}{10}
+    
+  \beamertemplatebookbibitems
+  % Start with overview books.
+
+  \bibitem{ESPECWebManual2022}
+    ESPEC.~Web Controller V3.
+    \newblock {\em User Manual: ESPEC Web Controller, V3}, wiki/bitbucket.com, 2022. \\
+    {\url{https://bitbucket.org/especnorthamerica/especweb/wiki/Web_Controller_V3_Home}}
+
+  \bibitem{ESPECWebManual2022}
+    ESPEC.~Web Controller V3.
+    \newblock {\em User Manual} [ESPEC Web Controller, V3]. Retrievable and viewable
+    on the menu bar under {\sl{About}}, 2022. \\
+    {\url{http://especSERIAL\#.local/\#/about}}
+
+  \bibitem{ESPECWebConfig2022}
+    ESPEC.~Production Configuration.
+    \newblock {\em ESPEC Web Controller, Factory Config}, ESPEC Web Controller V3, Internal Departmental Resource, 2022.
+    %\newblock MCC, 2020.
+  
+
+%  \beamertemplatearticlebibitems
+%  \bibitem{UbuntuUnity2017}
+%     Unity desktop ended.
+%     \newblock Failed to popualrize or market Unity as a solution to all Ubuntu products, Unity project will be ended in April 2017, said Canonical boss Mark Shuttleworth.  Retrieved from {\url{https://www.bbc.com/news/technology-39490848}}. 
+
+
+  %  S.~Someone.
+  %  \newblock On this and that.
+  %  \newblock {\em Journal of This and That}, 2(1):50--100,
+  %  2000.
+  \end{thebibliography}
+\end{frame}
+
+\end{document}

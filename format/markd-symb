@@ -1,0 +1,22 @@
+https://gist.github.com/pchaigno/1826ba1151890b751862
+
+<table>
+  <tr>
+    <th>Precessing at End of Operation</th>
+    <td>&#9744; Stop   &#9744; Power OFF &#9744;Hold Last Step </br> &#9744; Constant Operation (No. 1)(No. 2)(No. 3) </br> &#9744; Operate Next Program No. ( ), Step ( )</td>
+  </tr>
+  <tr>
+    <th>Counter A</th>
+    <td>Repeat Cycle: </br> Repeating Start Step ( ) Step ; Repeating End Step ( ) Step </td>
+  </tr>
+    <tr>
+    <th>Counter B</th>
+    <td>Repeat Cycle: </br> Repeating Start Step ( ) Step ; Repeating End Step ( ) Step </td>
+  </tr>
+    <tr>
+    <th>Start Setting </br> (Ramp Operation)</th>
+    <td>&#9744; Process Value </br> &#9744; Set Point (  &deg;C) (   %RH) </td>
+  </tr>
+</table>
+
+&#x2611; &#9745;

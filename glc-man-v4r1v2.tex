@@ -1,0 +1,82 @@
+
+\documentclass[11pt,twoside,openright]{book}
+%\documentclass[11pt,twoside,openany]{book}  
+% openany means: \clearpage rather than \cleardoublepage 
+% so openany can land on even or odd page. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% author: Paul Nong-Laolam <pnong-laolam@espec.com>
+% title: Software Engineer
+% company: 
+%    ESPEC North America, Inc.
+%    4141 Central Parkway
+%    Hudsonville, MI 49426 (USA)
+% date: May 13, 2025
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE
+% --------
+\input{./format/structure}       % insert commands to build the 
+                                 % structure of the document
+\input{./format/ch-title-format} % insert chapter title format commands 
+
+% END PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\input{./format/copyright-title-page}  % ESPEC copyright notice
+\cleardoublepage 
+\tableofcontents              % set table of contents
+\include{./format/rev_table}  % include revision history
+\cleardoublepage              % cleardouble page  
+                              % place it on roman page number
+\pagenumbering{arabic}        % turn on page numbering
+%\include{./format/rev_table} % include revision history
+%                             % place it on arabic page number 
+%
+% BEGIN MAIN MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -----------
+%%%% SET UP ROWCOLORING STAGE 
+%\newcounter{RowNum}
+%\newcommand{\SetRowColor}{%
+%   \noalign{\stepcounter{RowNum}}\ifnum\value{RowNum}>1\rowcolor[gray]{0.8}\fi%
+%   \noalign{\ifnum\value{RowNum}=2\setcounter{RowNum}{0}\fi}}
+% END ROWCOLORING
+
+% Define color names 
+\rowcolors{1}{light-cyan}{light-gray}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\include{glc}      % main text -- mod conversion from pandoc 
+\include{glc-mc1}    % main text for processing -- modded and corrected  
+%%%%%%
+% IMPORTANT:
+%
+% How to update Appendix:
+% If Appendix on FAQ has been updatged with new entries, apply the following procedure:
+% 1. After running rc-starter.sh, a new appendix file ("appdx0.tex") 
+% contains the new/added entry of FAQ's. 
+% 2. Copy-n-paste new entry(ies) into appdxd.tex.
+% 3. Issue pdflatex command to process the main manual file: 'glc-man-v4r1v1.tex'
+%%%%%%
+ 
+% -----------
+% END MAIN MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% BEGIN APPENDIX
+\appendix 
+%\include{appdx0}   % original file converted from Markdown--a stupid one
+% If appendix was edited, copy each section from "appdx0" and paste each into
+% appdxa % programming example 
+% appdxb % HMI specs  
+% appdxc % Software/Hardware Specs (AEEON)
+% appdxd % FAQs
+% etc. 
+\include{appdxa}    % modified file, programming manually--a better one 
+\include{appdxb}    % FAQ section 
+\include{appdxc}    % SPECS for Software Controller hardware 
+\include{appdxd}    % HMI specs 
+%END APPENDIX 
+
+% VERSION CONTROL ON LAST PAGE 
+\input{format/version-note} 
+
+\end{document}

@@ -1,0 +1,1 @@
+LaTeX source files are to produce graphics or figures. 
