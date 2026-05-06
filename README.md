@@ -54,6 +54,6 @@ Setup procedure is done via a combination of BASH shell scripts and pre-defined 
 
 ### Who do I talk to? ###
 
-* This branch is maintained solely by Paul Nong-Laolam (ESPEC North America, INC.). Any questions may be addressed to <pnong-laolam@espec.com>.
+* This branch is created and maintained by Paul Nong-Laolam (ESPEC North America, INC.). 
 
   
