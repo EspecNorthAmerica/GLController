@@ -1,10 +1,11 @@
 #!/bin/bash
 #####################################################################
 # author: Paul Nong-Laolam <pnong-laolam@espec.com>
+# license: MIT 
 # company:
 #    ESPEC North America, Inc.
 #    4141 Central Parkway
-#    Hudsoneville, MI 49426
+#    Hudsonville, MI 49426
 #####################################################################
 # MIT License
 #
