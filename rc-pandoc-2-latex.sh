@@ -53,9 +53,10 @@ sed -i 's/^\\documentclass\[\]{article}/\\documentclass\[11pt,twoside\]{book}/' 
 # to link an image from wihtin its database; we essentially remove the link
 # and include only the LaTeX commands to render a figure placement 
 #sed -i 's/\\includegraphics{https:\/\/bitbucket.org\/repo\/kMrjrgg\/images\//\\includegraphics{/g' $sourcefile 
-sed -i 's/\\includegraphics{https:\/\/bitbucket\.org\/repo\/kMrjrgg\/images\//\n\\includegraphics{figures\//g' $2
-sed -i 's/\\includegraphics{https:\/\/bitbucket\.org\/repo\/87eopek\/images\//\n\\includegraphics{figures\//g' $2
-sed -i 's/\\includegraphics{https:\/\/bitbucket\.org\/repo\/yRoG7Eb\/images\//\n\\includegraphics{figures\//g' $2
+#sed -i 's/\\includegraphics{https:\/\/bitbucket\.org\/repo\/kMrjrgg\/images\//\n\\includegraphics{figures\//g' $2
+#sed -i 's/\\includegraphics{https:\/\/bitbucket\.org\/repo\/87eopek\/images\//\n\\includegraphics{figures\//g' $2
+#sed -i 's/\\includegraphics{https:\/\/bitbucket\.org\/repo\/yRoG7Eb\/images\//\n\\includegraphics{figures\//g' $2
+sed -i 's/\\includegraphics{https:\/\/espec\.com\/ewcimg\/gl\/figures\//\n\\includegraphics{figures\//g' $2
 #
 # scale all figures to 95% of textwidth
 sed -i 's/\\includegraphics/\\includegraphics\[width=0\.95\\textwidth\]/g' $2
